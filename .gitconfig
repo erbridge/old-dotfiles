@@ -1,0 +1,7 @@
+[user]
+	name = Felix Laurie von Massenbach
+	email = felix@erbridge.co.uk
+[push]
+	default = simple
+[color]
+	ui = true
