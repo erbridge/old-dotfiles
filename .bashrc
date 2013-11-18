@@ -20,4 +20,3 @@ if [ -d "$HOME/.bash" ]; then
         . $HOME/.bash/prompt
     fi
 fi
-
