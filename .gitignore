@@ -4,6 +4,7 @@
 !.bash_logout
 !.gitconfig
 !.gitignore
+!.jshintrc
 !.profile
 
 !.bash/
