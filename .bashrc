@@ -20,3 +20,8 @@ if [ -d "$HOME/.bash" ]; then
         . $HOME/.bash/prompt
     fi
 fi
+
+# use rbenv if it's installed
+if rbenv -v > /dev/null; then
+    eval "$(rbenv init -)"
+fi
