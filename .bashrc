@@ -22,6 +22,6 @@ if [ -d "$HOME/.bash" ]; then
 fi
 
 # use rbenv if it's installed
-if rbenv -v > /dev/null; then
+if which rbenv > /dev/null; then
     eval "$(rbenv init -)"
 fi
