@@ -76,7 +76,7 @@ function set_prompt() {
         prompt="${TITLEBAR}${LIGHT_GRAY}\w${COLOR_NONE}"
     fi
 
-    set_git_prompt
+    set_git_prompt &> /dev/null
 
     if [ $previous_return_value == 0 ]; then
         PS1="${venv}${debian_chroot:+($debian_chroot)}${LIGHT_GREEN}∆ ${COLOR_NONE}${prompt} ${GIT_PROMPT}${LIGHT_GREEN}\$${COLOR_NONE} "
