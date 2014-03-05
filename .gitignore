@@ -4,9 +4,12 @@
 !.bash_logout
 !.gitconfig
 !.gitignore
+!.gitmodules
 !.jscs.json
 !.jshintrc
+!.oh-my-zsh
 !.profile
+!.zshrc
 
 !.bash/
 !.bash/*
