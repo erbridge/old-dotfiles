@@ -30,7 +30,7 @@
         "beforeOpeningRoundBrace": true
     },
     "disallowMultipleVarDecl": true,
-    "requireMultipleVarDecl": true,
+    "requireMultipleVarDecl": false,
     "disallowEmptyBlocks": true,
     "disallowSpacesInsideArrayBrackets": true,
     "disallowSpacesInsideParentheses": true,
