@@ -47,7 +47,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(compleat ssh-agent git python pip virtualenvwrapper rbenv bundler brew fabric django gem sudo sublime heroku z npm last-working-dir history-substring-search command-not-found colored-man)
 
-if [[ "x$COLORTERM" -eq "xgnome-terminal" && "x$TERM" -eq "xxterm" ]] && infocmp linux > /dev/null 2>&1; then
+if [ "x$COLORTERM" = "xgnome-terminal" -a "x$TERM" = "xxterm" ] && infocmp linux > /dev/null 2>&1; then
     TERM=linux
 fi
 
