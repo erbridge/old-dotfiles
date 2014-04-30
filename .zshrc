@@ -28,7 +28,13 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy-mm-dd"
 REPORTTIME=10
 
-plugins=(compleat ssh-agent git python pip virtualenvwrapper rbenv bundler brew fabric django gem sudo sublime heroku z npm last-working-dir history-substring-search command-not-found colored-man)
+plugins=(autojump bower bundler colored-man django extract fabric gem git git-extras heroku history-substring-search last-working-dir node npm pip python rbenv ssh-agent sudo systemadmin virtualenvwrapper)
+
+if [[ $('uname') == 'Linux' ]]; then
+    plugins+=(command-not-found systemd)
+elif [[ $('uname') == 'Darwin' ]]; then
+    plugins+=(brew brew-cask sublime)
+fi
 
 source $ZSH/oh-my-zsh.sh
 
@@ -37,7 +43,7 @@ source $ZSH/oh-my-zsh.sh
 ## aliases ##
 ##         ##
 
-if which /usr/bin/aura > /dev/null; then
+if which /usr/bin/aura > /dev/null 2&>1; then
     function aura() {
         AURA="$(/usr/bin/aura "$@" 2&>1)"
 
