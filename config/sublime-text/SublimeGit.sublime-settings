@@ -1,0 +1,9 @@
+{
+    "git_extensions": {
+        "git_flow": false,
+        "legit": false,
+        "hub": false
+    },
+    "git_commit_verbose": true,
+    "git_commit_pedantic": true
+}

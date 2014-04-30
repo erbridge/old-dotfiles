@@ -1,0 +1,42 @@
+{
+    "analize_lines": 500,
+    "my_name": "Felix Laurie von Massenbach (erbridge)",
+    "file_exclude_patterns": [
+    ],
+    "file_include_patterns": [
+        "*.c",
+        "*.cpp",
+        "*.cxx",
+        "*.cc",
+        "*.h",
+        "*.hpp",
+        "*.hxx",
+        "*.hh",
+        "*.cs",
+        "*.js",
+        "*.py",
+        "*.rb",
+        "*.java",
+        "*.m"
+    ],
+    "copyright": {
+        "enable": true,
+        "patterns": [
+            "(?i)(copyright|\\(c\\)|©)\\s+"
+        ]
+    },
+    "modified_user_name": {
+        "enable": true,
+        "patterns": [
+            "(?i)@?updater\\s*[:= ]",
+            "(?i)@?modified by\\s*[:= ] ?"
+        ]
+    },
+    "modified_date": {
+        "enable": true,
+        "format": "%Y-%m-%d",
+        "patterns": [
+            "(?i)@?last modified\\s*[:= ] ?"
+        ]
+    }
+}

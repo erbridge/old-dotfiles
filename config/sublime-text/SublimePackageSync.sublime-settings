@@ -1,0 +1,26 @@
+{
+    "sync_repos": {
+        "CodeWrapper": {
+            "remotes": {
+                "origin": "git@github.com:erbridge/CodeWrapper.git"
+            },
+            "object_to_checkout": "origin/master"
+        },
+        "Terminal": {
+            "remotes": {
+                "origin": "git@github.com:erbridge/sublime_terminal.git"
+            },
+            "object_to_checkout": "origin/master"
+        },
+        "Io Language": {
+            "remotes": {
+                "origin": "git@github.com:yangsu/sublime-io.git"
+            },
+            "object_to_checkout": "origin/master"
+        }
+    },
+
+    "auto_sync_ignore": [
+        "SublimePackageSync"
+    ]
+}

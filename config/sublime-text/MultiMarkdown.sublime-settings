@@ -1,0 +1,11 @@
+{
+    "color_scheme": "Packages/MarkdownEditing/MarkdownEditor-Dark.tmTheme",
+    "trim_trailing_white_space_on_save": true,
+    "draw_centered": false,
+    "rulers":
+    [
+        80
+    ],
+    "line_numbers": true,
+    "highlight_line": true
+}

@@ -1,0 +1,42 @@
+{
+	"auto_close_tags": true,
+	"bold_folder_labels": true,
+	"caret_style": "wide",
+	"close_windows_when_empty": true,
+	"color_scheme": "Packages/User/Nocturnal (SL).tmTheme",
+	"dictionary": "Packages/Language - English/en_GB.dic",
+	"drag_text": false,
+	"enable_telemetry": true,
+	"ensure_newline_at_eof_on_save": true,
+	"fade_fold_buttons": false,
+	"find_selected_text": true,
+	"font_options":
+	[
+		"subpixel_antialias"
+	],
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"hot_exit": true,
+	"ignored_packages":
+	[
+		"Markdown",
+		"Vintage"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"open_files_in_new_window": false,
+	"rulers":
+	[
+		80
+	],
+	"show_full_path": true,
+	"theme": "Spacegray Eighties.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_automatic_white_space": false,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": "auto",
+	"wrap_width": 80
+}
