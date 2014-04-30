@@ -1,0 +1,69 @@
+[global_config]
+  handle_size = 0
+  title_hide_sizetext = True
+  always_split_with_profile = True
+  focus = system
+  title_transmit_fg_color = "#2d2d2d"
+  title_inactive_fg_color = "#2d2d2d"
+  suppress_multiple_term_dialog = True
+  enabled_plugins = InactivityWatch, CustomCommandsMenu, ActivityWatch
+  title_receive_bg_color = "#6699cc"
+  title_transmit_bg_color = "#99cc99"
+  title_receive_fg_color = "#2d2d2d"
+  inactive_color_offset = 0.72
+  title_inactive_bg_color = "#cc99cc"
+[keybindings]
+[profiles]
+  [[default]]
+    scrollbar_position = hidden
+    palette = "#2d2d2d:#f2777a:#99cc99:#ffcc66:#6699cc:#cc99cc:#66cccc:#f2f0ec:#2d2d2d:#f2777a:#99cc99:#ffcc66:#6699cc:#cc99cc:#66cccc:#f2f0ec"
+    visible_bell = True
+    background_image = None
+    cursor_color = "#99cc99"
+    foreground_color = "#f2f0ec"
+    scroll_on_output = False
+    icon_bell = False
+    background_color = "#2d2d2d"
+    scrollback_infinite = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+  [[3way]]
+    [[[child0]]]
+      position = 112:52
+      type = Window
+      order = 0
+      parent = ""
+      size = 1298, 752
+    [[[child1]]]
+      position = 649
+      type = HPaned
+      order = 0
+      parent = child0
+    [[[child3]]]
+      position = 381
+      type = VPaned
+      order = 1
+      parent = child1
+    [[[terminal2]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child1
+    [[[terminal5]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child3
+    [[[terminal4]]]
+      profile = default
+      command = top
+      type = Terminal
+      order = 0
+      parent = child3
+[plugins]
