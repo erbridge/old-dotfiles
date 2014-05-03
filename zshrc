@@ -28,7 +28,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy-mm-dd"
 REPORTTIME=10
 
-plugins=(autojump bower bundler colored-man django extract fabric gem git git-extras heroku history-substring-search last-working-dir node npm pip python rbenv ssh-agent sudo systemadmin virtualenvwrapper)
+plugins=(autojump bower bundler colored-man django extract fabric gem git git-extras heroku history-substring-search last-working-dir node npm pip python rbenv sudo systemadmin virtualenvwrapper)
 
 if [[ $('uname') == 'Linux' ]]; then
     plugins+=(command-not-found systemd)
@@ -53,4 +53,14 @@ if which /usr/bin/aura > /dev/null 2&>1; then
             echo "$AURA"
         fi
     }
+fi
+
+
+##       ##
+## setup ##
+##       ##
+
+if which envoy > /dev/null 2&>1; then
+    envoy -t ssh-agent
+    source <(envoy -p)
 fi
