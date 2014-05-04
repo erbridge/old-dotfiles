@@ -36,7 +36,7 @@ elif [[ $('uname') == 'Darwin' ]]; then
     plugins+=(brew brew-cask sublime)
 fi
 
-source $ZSH/oh-my-zsh.sh
+source "$ZSH/oh-my-zsh.sh"
 
 
 ##         ##
