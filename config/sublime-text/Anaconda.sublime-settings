@@ -37,7 +37,7 @@
     /*
         Default python interpreter.
 
-        This can (an should) be overriden byb project settings
+        This can (an should) be overriden by project settings
     */
     "python_interpreter": "python",
 
@@ -138,7 +138,7 @@
 
         Set it as 0 if you are unsure here
     */
-    "aggressive": 0,
+    "aggressive": 1,
 
     /*
         Do not fix the errors listed here:
@@ -251,7 +251,7 @@
     ],
 
     // Maximum line length for pep8
-    "pep8_max_line_length": 79,
+    "pep8_max_line_length": 80,
 
     // Set this to true to turn pep257 checking on
     "pep257": false,
