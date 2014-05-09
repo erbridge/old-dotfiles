@@ -19,10 +19,12 @@
     palette = "#2d2d2d:#f2777a:#99cc99:#ffcc66:#6699cc:#cc99cc:#66cccc:#f2f0ec:#2d2d2d:#f2777a:#99cc99:#ffcc66:#6699cc:#cc99cc:#66cccc:#f2f0ec"
     visible_bell = True
     background_image = None
+    use_system_font = False
     cursor_color = "#99cc99"
     foreground_color = "#f2f0ec"
     scroll_on_output = False
     icon_bell = False
+    font = Lekton 12
     background_color = "#2d2d2d"
     scrollback_infinite = True
 [layouts]
