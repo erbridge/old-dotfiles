@@ -1,0 +1,11 @@
+[
+    {
+        "class": "tabset_control",
+        "layer0.tint": [235, 235, 235]
+    },
+    {
+        "class": "tab_control",
+        "layer0.tint": [235, 235, 235],
+        "layer1.tint": [235, 235, 235]
+    }
+]
