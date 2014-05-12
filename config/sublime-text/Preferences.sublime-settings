@@ -39,9 +39,9 @@
 	[
 		80
 	],
+	"show_full_path": true,
 	"sidebar_row_padding_medium": true,
 	"sidebar_size_12": true,
-	"show_full_path": true,
 	"tabs_medium": true,
 	"theme": "Afterglow-blue.sublime-theme",
 	"translate_tabs_to_spaces": true,
