@@ -1,6 +1,8 @@
 {
 	"auto_close_tags": true,
 	"bold_folder_labels": true,
+	"caret_extra_bottom": 1,
+	"caret_extra_top": 1,
 	"caret_style": "wide",
 	"close_windows_when_empty": true,
 	"color_scheme": "Packages/User/Nocturnal (SL).tmTheme",
@@ -30,6 +32,8 @@
 		"draw_normal",
 		"draw_active"
 	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
 	"open_files_in_new_window": false,
 	"rulers":
 	[
