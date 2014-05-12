@@ -138,7 +138,7 @@
 
         Set it as 0 if you are unsure here
     */
-    "aggressive": 1,
+    "aggressive": 0,
 
     /*
         Do not fix the errors listed here:
