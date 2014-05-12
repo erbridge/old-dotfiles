@@ -11,7 +11,7 @@ fi
 
 export EDITOR=nano
 
-export PATH=$HOME/bin:$PATH
+export PATH="$HOME/bin:$PATH"
 
 
 ##           ##
@@ -28,7 +28,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy-mm-dd"
 REPORTTIME=10
 
-plugins=(autojump bower bundler colored-man django extract fabric gem git git-extras heroku history-substring-search last-working-dir node npm pip python rbenv sudo systemadmin virtualenvwrapper)
+plugins=(autojump bower bundler colored-man django extract fabric gem git git-extras heroku history-substring-search last-working-dir node npm pip python rand-quote rbenv sudo systemadmin virtualenvwrapper)
 
 if [[ $('uname') == 'Linux' ]]; then
     plugins+=(command-not-found systemd)
@@ -42,6 +42,7 @@ source "$ZSH/oh-my-zsh.sh"
 ##         ##
 ## aliases ##
 ##         ##
+
 
 if which /usr/bin/aura > /dev/null 2&>1; then
     function aura() {
@@ -60,7 +61,20 @@ fi
 ## setup ##
 ##       ##
 
+
 if which envoy > /dev/null 2&>1; then
     envoy -t ssh-agent
     source <(envoy -p)
+fi
+
+
+##                 ##
+## welcome message ##
+##                 ##
+
+
+if which quote > /dev/null 2&>1; then
+    quote
+else
+    echo "Welcome!"
 fi
