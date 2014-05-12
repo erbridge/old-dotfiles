@@ -23,6 +23,7 @@
 		"Goto Documentation",
 		"HTML5",
 		"MarkdownEditing",
+		"Markmon real-time markdown preview",
 		"Modific",
 		"Monokai Gray",
 		"Move By Symbols",
@@ -59,6 +60,7 @@
 		"TodoReview",
 		"ToggleQuotes",
 		"Unity3D Build System",
-		"VAlign"
+		"VAlign",
+		"WhoCalled Function Finder"
 	]
 }

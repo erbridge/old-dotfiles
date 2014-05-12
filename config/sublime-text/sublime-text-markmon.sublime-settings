@@ -1,0 +1,6 @@
+{
+    "port": 3002,
+    "command": "md2html",
+    "stylesheet": null,
+    "projectdir": null
+}
