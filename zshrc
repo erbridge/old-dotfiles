@@ -28,10 +28,10 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy-mm-dd"
 REPORTTIME=10
 
-plugins=(autojump bower bundler colored-man django extract fabric gem git git-extras heroku history-substring-search last-working-dir node npm pip python rand-quote rbenv sudo systemadmin virtualenvwrapper)
+plugins=(autojump bower bundler colored-man django extract fabric gem git git-extras heroku history-substring-search node npm pip python rand-quote rbenv sudo systemadmin virtualenvwrapper)
 
 if [[ $('uname') == 'Linux' ]]; then
-    plugins+=(command-not-found systemd)
+    plugins+=(systemd)
 elif [[ $('uname') == 'Darwin' ]]; then
     plugins+=(brew brew-cask sublime)
 fi
@@ -65,6 +65,20 @@ fi
 if which envoy > /dev/null 2&>1; then
     envoy -t ssh-agent
     source <(envoy -p)
+fi
+
+if which pkgfile > /dev/null 2&>1; then
+    command_not_found_handler() {
+        local pkgs cmd="$1"
+
+        pkgs=(${(f)"$(pkgfile -b -v -- "$cmd" 2>/dev/null)"})
+        if [[ -n "$pkgs" ]]; then
+            printf '%s may be found in the following packages:\n' "$cmd"
+            printf '  %s\n' $pkgs[@]
+        fi
+
+        return 127
+    }
 fi
 
 
