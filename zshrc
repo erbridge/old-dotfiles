@@ -88,7 +88,11 @@ fi
 
 
 if which quote > /dev/null 2>&1; then
-    quote
+    if which wget > /dev/null 2>&1 && wget -q -O - --tries=10 --timeout=1 http://google.com > /dev/null 2>&1; then
+        quote
+    else
+        echo "No internet!"
+    fi
 else
     echo "Welcome!"
 fi
