@@ -44,9 +44,9 @@ source "$ZSH/oh-my-zsh.sh"
 ##         ##
 
 
-if which /usr/bin/aura > /dev/null 2&>1; then
+if which /usr/bin/aura > /dev/null 2>&1; then
     function aura() {
-        AURA="$(/usr/bin/aura "$@" 2&>1)"
+        AURA="$(/usr/bin/aura "$@" 2>&1)"
 
         if echo "$AURA" | grep -q '^aura >>= .*Please check your input.*$\|^aura >>= .*You have to use `.*sudo.*` for that.*$'; then
             sudo /usr/bin/aura "$@"
@@ -62,12 +62,12 @@ fi
 ##       ##
 
 
-if which envoy > /dev/null 2&>1; then
+if which envoy > /dev/null 2>&1; then
     envoy -t ssh-agent
     source <(envoy -p)
 fi
 
-if which pkgfile > /dev/null 2&>1; then
+if which pkgfile > /dev/null 2>&1; then
     command_not_found_handler() {
         local pkgs cmd="$1"
 
@@ -87,7 +87,7 @@ fi
 ##                 ##
 
 
-if which quote > /dev/null 2&>1; then
+if which quote > /dev/null 2>&1; then
     quote
 else
     echo "Welcome!"
