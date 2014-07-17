@@ -20,20 +20,20 @@
         "*.m"
     ],
     "copyright": {
-        "enable": true,
+        "enable": false,
         "patterns": [
             "(?i)(copyright|\\(c\\)|©)\\s+"
         ]
     },
     "modified_user_name": {
-        "enable": true,
+        "enable": false,
         "patterns": [
             "(?i)@?updater\\s*[:= ]",
             "(?i)@?modified by\\s*[:= ] ?"
         ]
     },
     "modified_date": {
-        "enable": true,
+        "enable": false,
         "format": "%Y-%m-%d",
         "patterns": [
             "(?i)@?last modified\\s*[:= ] ?"
