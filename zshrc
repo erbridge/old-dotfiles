@@ -23,6 +23,7 @@ ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="triangle"
 DISABLE_AUTO_UPDATE="true"
+ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy-mm-dd"
@@ -44,9 +45,9 @@ source "$ZSH/oh-my-zsh.sh"
 ##         ##
 
 
-if which /usr/bin/aura > /dev/null 2&>1; then
+if which /usr/bin/aura > /dev/null 2>&1; then
     function aura() {
-        AURA="$(/usr/bin/aura "$@" 2&>1)"
+        AURA="$(/usr/bin/aura "$@" 2>&1)"
 
         if echo "$AURA" | grep -q '^aura >>= .*Please check your input.*$\|^aura >>= .*You have to use `.*sudo.*` for that.*$'; then
             sudo /usr/bin/aura "$@"
@@ -62,12 +63,12 @@ fi
 ##       ##
 
 
-if which envoy > /dev/null 2&>1; then
+if which envoy > /dev/null 2>&1; then
     envoy -t ssh-agent
     source <(envoy -p)
 fi
 
-if which pkgfile > /dev/null 2&>1; then
+if which pkgfile > /dev/null 2>&1; then
     command_not_found_handler() {
         local pkgs cmd="$1"
 
@@ -87,8 +88,12 @@ fi
 ##                 ##
 
 
-if which quote > /dev/null 2&>1; then
-    quote
+if which quote > /dev/null 2>&1; then
+    if which wget > /dev/null 2>&1 && wget -q -O - --tries=10 --timeout=1 http://google.com > /dev/null 2>&1; then
+        quote
+    else
+        echo "No internet!"
+    fi
 else
     echo "Welcome!"
 fi
