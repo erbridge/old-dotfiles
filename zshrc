@@ -37,6 +37,11 @@ elif [[ $('uname') == 'Darwin' ]]; then
     plugins+=(brew brew-cask sublime)
 fi
 
+# Must happen before history-substring-search is loaded.
+if [[ -f "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
+    source "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+fi
+
 source "$ZSH/oh-my-zsh.sh"
 
 
