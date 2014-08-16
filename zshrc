@@ -29,7 +29,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy-mm-dd"
 REPORTTIME=10
 
-plugins=(autojump bower bundler colored-man django extract fabric gem git git-extras heroku history-substring-search node npm pip python rand-quote rbenv sudo systemadmin virtualenvwrapper)
+plugins=(autojump bower bundler colored-man django extract fabric gem git git-extras golang heroku history-substring-search node npm pip python rand-quote rbenv sudo systemadmin virtualenvwrapper)
 
 if [[ $('uname') == 'Linux' ]]; then
     plugins+=(systemd)
