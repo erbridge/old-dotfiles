@@ -91,6 +91,10 @@ if which pkgfile > /dev/null 2>&1; then
     }
 fi
 
+if [[ -s "$HOME/.gvm/scripts/gvm" ]]; then
+    source "$HOME/.gvm/scripts/gvm"
+fi
+
 
 ##                 ##
 ## welcome message ##
