@@ -89,6 +89,10 @@ if which pkgfile > /dev/null 2>&1; then
     }
 fi
 
+if [[ $('uname') == 'Darwin' ]]; then
+    ulimit -n 4096
+fi
+
 
 ##                 ##
 ## welcome message ##
