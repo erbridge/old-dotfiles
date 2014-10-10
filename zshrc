@@ -29,13 +29,15 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy-mm-dd"
 REPORTTIME=10
 
-plugins=(autojump bower bundler colored-man django extract fabric gem git git-extras heroku history-substring-search node npm pip python rand-quote rbenv sudo systemadmin virtualenvwrapper)
+plugins=(autojump bower bundler colored-man django extract fabric gem git git-extras golang heroku history-substring-search node npm pip python rand-quote rbenv sudo systemadmin virtualenvwrapper)
 
 if [[ $('uname') == 'Linux' ]]; then
     plugins+=(systemd)
 elif [[ $('uname') == 'Darwin' ]]; then
     plugins+=(brew brew-cask sublime)
 fi
+
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
 # Must happen before history-substring-search is loaded.
 if [[ -f "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
@@ -91,6 +93,10 @@ fi
 
 if [[ $('uname') == 'Darwin' ]]; then
     ulimit -n 4096
+fi
+
+if [[ -s "$HOME/.gvm/scripts/gvm" ]]; then
+    source "$HOME/.gvm/scripts/gvm"
 fi
 
 
