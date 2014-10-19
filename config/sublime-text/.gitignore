@@ -1,7 +1,9 @@
 ColorPicker
+GoSublime
 WhoCalledData
 
 *.cache
 codeivate-st.sublime-settings
+GoSublime-aux.sublime-settings
 Package Control.last-run
 Package Control.system-ca-bundle
