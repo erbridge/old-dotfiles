@@ -66,6 +66,9 @@ if which /usr/bin/aura > /dev/null 2>&1; then
     }
 fi
 
+alias grep="grep $GREP_OPTIONS"
+unset GREP_OPTIONS
+
 
 ##       ##
 ## setup ##
