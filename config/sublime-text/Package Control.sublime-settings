@@ -54,7 +54,6 @@
 		"SublimeLinter-annotations",
 		"SublimeLinter-contrib-rustc",
 		"SublimeLinter-cppcheck",
-		"SublimeLinter-html-tidy",
 		"SublimeLinter-jscs",
 		"SublimeLinter-jshint",
 		"SublimeLinter-json",
