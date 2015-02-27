@@ -1,6 +1,10 @@
 {
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
+		"AAAPackageDev",
 		"Anaconda",
 		"AutoFileName",
 		"Autoprefixer",
@@ -21,10 +25,12 @@
 		"EditorConfig",
 		"FindKeyConflicts",
 		"Function Name Display",
+		"GDScript-sublime",
 		"Generic Config",
 		"GoSublime",
-		"Goto Documentation",
+		"GotoDocumentation",
 		"HTML5",
+		"Jekyll",
 		"LESS",
 		"MarkdownEditing",
 		"Markmon real-time markdown preview",
@@ -33,6 +39,7 @@
 		"Move By Symbols",
 		"Nocturnal Color Scheme",
 		"Open URL",
+		"Package Control",
 		"PackageResourceViewer",
 		"Prolog",
 		"Protocol Buffer Syntax",
@@ -69,5 +76,9 @@
 		"Unity3D Build System",
 		"VAlign",
 		"WhoCalled Function Finder"
+	],
+	"repositories":
+	[
+		"https://github.com/beefsack/GDScript-sublime"
 	]
 }
