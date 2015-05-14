@@ -11,7 +11,7 @@ fi
 
 export EDITOR=nano
 
-npm_path=`npm config get prefix`
+npm_path=$(npm config get prefix)
 npm_bin_path="$npm_path/bin"
 if [[ -d "$npm_path" && -d "$npm_bin_path" ]]; then
     export PATH="$npm_bin_path:$PATH"
@@ -93,7 +93,7 @@ if which pkgfile > /dev/null 2>&1; then
         pkgs=(${(f)"$(pkgfile -b -v -- "$cmd" 2>/dev/null)"})
         if [[ -n "$pkgs" ]]; then
             printf '%s may be found in the following packages:\n' "$cmd"
-            printf '  %s\n' $pkgs[@]
+            printf '  %s\n' "${pkgs[@]}"
         fi
 
         return 127
