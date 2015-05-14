@@ -24,7 +24,7 @@
     foreground_color = "#f2f0ec"
     scroll_on_output = False
     icon_bell = False
-    font = Lekton 12
+    font = "Input Mono Condensed, Light Condensed 12"
     background_color = "#2d2d2d"
     scrollback_infinite = True
 [layouts]
