@@ -8,8 +8,8 @@
 	// the corresponding environment(PATH) variable, if it exists.
 	"env":
 	{
-		"GOROOT": "$HOME/.gvm/gos/go1.3.3",
-		"GOPATH": "$HOME/.gvm/pkgsets/go1.3.3/global"
+		"GOROOT": "$HOME/.gvm/gos/go1.4",
+		"GOPATH": "$HOME/.gvm/pkgsets/go1.4/global"
 	},
 
 	// if set, whenever possible `GOPATH` will be set to `GS_GOPATH`.
