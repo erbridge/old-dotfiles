@@ -114,12 +114,8 @@ fi
 ##                 ##
 
 
-if which quote > /dev/null 2>&1; then
-    if which wget > /dev/null 2>&1 && wget -q -O - --tries=10 --timeout=1 http://google.com > /dev/null 2>&1; then
-        quote
-    else
-        echo "No internet!"
-    fi
+if which is-online > /dev/null 2>&1; then
+    is-online
 else
     echo "Welcome!"
 fi
