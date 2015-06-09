@@ -85,6 +85,12 @@ fi
 
 antigen theme erbridge/triangle-zsh-theme triangle
 
+# autoupdate-antigen.zshplugin settings
+ANTIGEN_PLUGIN_UPDATE_DAYS=1
+ANTIGEN_SYSTEM_UPDATE_DAYS=1
+
+antigen bundle unixorn/autoupdate-antigen.zshplugin
+
 antigen apply
 
 
