@@ -72,10 +72,10 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
 antigen bundle zsh-users/zsh-syntax-highlighting
 
-if [[ $('uname') == 'Linux' ]]; then
+if [[ "$OSTYPE" == linux* ]]; then
   antigen bundle docker
   antigen bundle systemd
-elif [[ $('uname') == 'Darwin' ]]; then
+elif [[ "$OSTYPE" == darwin* ]]; then
   antigen bundle brew
   antigen bundle brew-cask
   antigen bundle sublime
@@ -128,7 +128,7 @@ if which pkgfile > /dev/null 2>&1; then
     }
 fi
 
-if [[ $('uname') == 'Darwin' ]]; then
+if [[ "$OSTYPE" == darwin* ]]; then
     ulimit -n 4096
 fi
 
