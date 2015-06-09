@@ -21,38 +21,77 @@ export PATH="$HOME/bin:$PATH"
 
 
 ##           ##
-## oh-my-zsh ##
+## zsh setup ##
 ##           ##
 
 
-ZSH=$HOME/.oh-my-zsh
+ZSHA_BASE=$HOME/dotfiles
+source "$ZSHA_BASE/antigen/antigen.zsh"
 
-ZSH_THEME="triangle"
-DISABLE_AUTO_UPDATE="true"
+# oh-my-zsh settings
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy-mm-dd"
 REPORTTIME=10
 
-plugins=(autojump bower bundler colored-man django extract fabric gem git git-extras golang heroku history-substring-search node npm pip python rand-quote rbenv sudo systemadmin vagrant virtualenvwrapper)
+antigen use oh-my-zsh
 
-if [[ $('uname') == 'Linux' ]]; then
-    plugins+=(docker systemd)
-elif [[ $('uname') == 'Darwin' ]]; then
-    plugins+=(brew brew-cask sublime)
+antigen bundle autojump
+antigen bundle bower
+antigen bundle bundler
+antigen bundle colored-man
+antigen bundle django
+antigen bundle ember-cli
+antigen bundle extract
+antigen bundle fabric
+antigen bundle gem
+antigen bundle git
+antigen bundle git-extras
+antigen bundle golang
+antigen bundle heroku
+antigen bundle node
+antigen bundle npm
+antigen bundle pip
+antigen bundle python
+antigen bundle rbenv
+antigen bundle sudo
+antigen bundle systemadmin
+antigen bundle vagrant
+antigen bundle virtualenvwrapper
+
+antigen bundle zsh-users/zsh-completions src
+
+antigen bundle zsh-users/zsh-history-substring-search
+
+# Set key bindings for zsh-history-substring-search
+zmodload zsh/terminfo
+
+if [[ -n "$terminfo[kcuu1]" ]]; then
+  bindkey "$terminfo[kcuu1]" history-substring-search-up
 fi
 
+if [[ -n "$terminfo[kcud1]" ]]; then
+  bindkey "$terminfo[kcud1]" history-substring-search-down
+fi
+
+# zsh-syntax-highlighting settings
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
-# Must happen before history-substring-search is loaded.
-if [[ -f "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
-    source "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-elif [[ -f "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"  ]]; then
-    source "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+if [[ $('uname') == 'Linux' ]]; then
+  antigen bundle docker
+  antigen bundle systemd
+elif [[ $('uname') == 'Darwin' ]]; then
+  antigen bundle brew
+  antigen bundle brew-cask
+  antigen bundle sublime
 fi
 
-source "$ZSH/oh-my-zsh.sh"
+antigen theme erbridge/triangle-zsh-theme triangle
+
+antigen apply
 
 
 ##         ##
@@ -71,9 +110,6 @@ if which /usr/bin/aura > /dev/null 2>&1; then
         fi
     }
 fi
-
-alias grep="grep $GREP_OPTIONS"
-unset GREP_OPTIONS
 
 
 ##       ##
