@@ -7,3 +7,5 @@ codeivate-st.sublime-settings
 GoSublime-aux.sublime-settings
 Package Control.last-run
 Package Control.system-ca-bundle
+Package Control.user-ca-bundle
+Package Control.merged-ca-bundle
