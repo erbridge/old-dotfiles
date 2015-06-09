@@ -136,6 +136,15 @@ if [[ -s "$HOME/.gvm/scripts/gvm" ]]; then
     source "$HOME/.gvm/scripts/gvm"
 fi
 
+# Run bits that don't affect the current session in a background process
+{
+    # Precompile the completion dump to increase startup speed
+    dump_file="$HOME/.zcompdump"
+    if [[ "$dump_file" -nt "${dump_file}.zwc" || ! -s "${dump_file}.zwc" ]]; then
+        zcompile "$dump_file"
+    fi
+} &!
+
 
 ##                 ##
 ## welcome message ##
