@@ -52,6 +52,8 @@ antigen bundle systemadmin
 antigen bundle vagrant
 antigen bundle virtualenvwrapper
 
+antigen bundle djui/alias-tips
+
 antigen bundle zsh-users/zsh-completions src
 
 antigen bundle zsh-users/zsh-history-substring-search
