@@ -24,7 +24,6 @@
 		"EditorConfig",
 		"FindKeyConflicts",
 		"Function Name Display",
-		"GDScript-sublime",
 		"Generic Config",
 		"GoSublime",
 		"GotoDocumentation",
@@ -78,6 +77,5 @@
 	],
 	"repositories":
 	[
-		"https://github.com/beefsack/GDScript-sublime"
 	]
 }
