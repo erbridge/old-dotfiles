@@ -1,4 +1,10 @@
 {
+    "codeintel_syntax_map":
+    {
+        "Python Django": "Python",
+        "HTML Django": "HTML5"
+    },
+
     "codeintel_selected_catalogs":
     [
         "jQuery", "HTML5"
