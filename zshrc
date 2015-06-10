@@ -52,7 +52,11 @@ antigen bundle systemadmin
 antigen bundle vagrant
 antigen bundle virtualenvwrapper
 
+antigen bundle akoenig/gulp-autocompletion-zsh
 antigen bundle djui/alias-tips
+antigen bundle horosgrisa/zsh-gvm
+antigen bundle supercrabtree/k
+antigen bundle Tarrasch/zsh-bd
 
 antigen bundle zsh-users/zsh-completions src
 
@@ -138,10 +142,6 @@ fi
 
 if [[ "$OSTYPE" == darwin* ]]; then
     ulimit -n 4096
-fi
-
-if [[ -s "$HOME/.gvm/scripts/gvm" ]]; then
-    source "$HOME/.gvm/scripts/gvm"
 fi
 
 # Run bits that don't affect the current session in a background process
