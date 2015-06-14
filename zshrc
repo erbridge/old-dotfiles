@@ -17,9 +17,6 @@ export EDITOR=nano
 ##           ##
 
 
-ZSHA_BASE=$HOME/dotfiles
-source "$ZSHA_BASE/antigen/antigen.zsh"
-
 # oh-my-zsh settings
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
@@ -27,75 +24,85 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy-mm-dd"
 REPORTTIME=10
 
-antigen use oh-my-zsh
-
-antigen bundle autojump
-antigen bundle bower
-antigen bundle bundler
-antigen bundle colored-man
-antigen bundle django
-antigen bundle ember-cli
-antigen bundle extract
-antigen bundle fabric
-antigen bundle gem
-antigen bundle git
-antigen bundle git-extras
-antigen bundle golang
-antigen bundle heroku
-antigen bundle node
-antigen bundle npm
-antigen bundle pip
-antigen bundle python
-antigen bundle rbenv
-antigen bundle sudo
-antigen bundle systemadmin
-antigen bundle vagrant
-antigen bundle virtualenvwrapper
-
-antigen bundle akoenig/gulp-autocompletion-zsh
-antigen bundle djui/alias-tips
-antigen bundle horosgrisa/zsh-gvm
-antigen bundle supercrabtree/k
-antigen bundle Tarrasch/zsh-bd
-
-antigen bundle zsh-users/zsh-completions src
-
-antigen bundle zsh-users/zsh-history-substring-search
-
-# Set key bindings for zsh-history-substring-search
-zmodload zsh/terminfo
-
-if [[ -n "$terminfo[kcuu1]" ]]; then
-  bindkey "$terminfo[kcuu1]" history-substring-search-up
-fi
-
-if [[ -n "$terminfo[kcud1]" ]]; then
-  bindkey "$terminfo[kcud1]" history-substring-search-down
-fi
-
 # zsh-syntax-highlighting settings
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
-antigen bundle zsh-users/zsh-syntax-highlighting
+# autoupdate-zgen settings
+ZGEN_PLUGIN_UPDATE_DAYS=1
+ZGEN_SYSTEM_UPDATE_DAYS=1
 
-if [[ "$OSTYPE" == linux* ]]; then
-  antigen bundle docker
-  antigen bundle systemd
-elif [[ "$OSTYPE" == darwin* ]]; then
-  antigen bundle brew
-  antigen bundle brew-cask
-  antigen bundle sublime
+# Setup zgen
+ZGEN_CLONE_DIR="$HOME/zgen"
+
+if [ ! -f "$ZGEN_CLONE_DIR/zgen.zsh" ]; then
+    git clone git@github.com:tarjoilija/zgen.git "$ZGEN_CLONE_DIR"
 fi
 
-antigen theme erbridge/triangle-zsh-theme triangle
+source "$ZGEN_CLONE_DIR/zgen.zsh"
 
-# autoupdate-antigen.zshplugin settings
-ANTIGEN_PLUGIN_UPDATE_DAYS=1
-ANTIGEN_SYSTEM_UPDATE_DAYS=1
+if ! zgen saved; then
+    # oh-my-zsh plugins
+    zgen oh-my-zsh
 
-antigen bundle unixorn/autoupdate-antigen.zshplugin
+    zgen oh-my-zsh plugins/autojump
+    zgen oh-my-zsh plugins/bower
+    zgen oh-my-zsh plugins/bundler
+    zgen oh-my-zsh plugins/colored-man
+    zgen oh-my-zsh plugins/django
+    zgen oh-my-zsh plugins/ember-cli
+    zgen oh-my-zsh plugins/extract
+    zgen oh-my-zsh plugins/fabric
+    zgen oh-my-zsh plugins/gem
+    zgen oh-my-zsh plugins/git
+    zgen oh-my-zsh plugins/git-extras
+    zgen oh-my-zsh plugins/golang
+    zgen oh-my-zsh plugins/heroku
+    zgen oh-my-zsh plugins/node
+    zgen oh-my-zsh plugins/npm
+    zgen oh-my-zsh plugins/pip
+    zgen oh-my-zsh plugins/python
+    zgen oh-my-zsh plugins/rbenv
+    zgen oh-my-zsh plugins/sudo
+    zgen oh-my-zsh plugins/systemadmin
+    zgen oh-my-zsh plugins/vagrant
+    zgen oh-my-zsh plugins/virtualenvwrapper
 
-antigen apply
+    if [[ "$OSTYPE" == linux* ]]; then
+      zgen oh-my-zsh plugins/docker
+      zgen oh-my-zsh plugins/systemd
+    elif [[ "$OSTYPE" == darwin* ]]; then
+      zgen oh-my-zsh plugins/brew
+      zgen oh-my-zsh plugins/brew-cask
+      zgen oh-my-zsh plugins/sublime
+    fi
+
+    # zsh-users plugins
+    zgen load zsh-users/zsh-completions src
+    zgen load zsh-users/zsh-history-substring-search
+    zgen load zsh-users/zsh-syntax-highlighting
+
+    # Other plugins
+    zgen load akoenig/gulp-autocompletion-zsh
+    zgen load djui/alias-tips
+    zgen load horosgrisa/zsh-gvm
+    zgen load supercrabtree/k
+    zgen load Tarrasch/zsh-bd
+    zgen load unixorn/autoupdate-zgen
+
+    # Theme
+    zgen load erbridge/triangle-zsh-theme triangle
+
+    zgen save
+fi
+
+# zsh-history-substring-search key bindings
+zmodload zsh/terminfo
+if [[ -n "$terminfo[kcuu1]" ]]; then
+  bindkey "$terminfo[kcuu1]" history-substring-search-up
+fi
+if [[ -n "$terminfo[kcud1]" ]]; then
+  bindkey "$terminfo[kcud1]" history-substring-search-down
+fi
 
 
 ##         ##
@@ -143,15 +150,6 @@ fi
 if [[ "$OSTYPE" == darwin* ]]; then
     ulimit -n 4096
 fi
-
-# Run bits that don't affect the current session in a background process
-{
-    # Precompile the completion dump to increase startup speed
-    dump_file="$HOME/.zcompdump"
-    if [[ "$dump_file" -nt "${dump_file}.zwc" || ! -s "${dump_file}.zwc" ]]; then
-        zcompile "$dump_file"
-    fi
-} &!
 
 
 ##                 ##
