@@ -30,6 +30,7 @@ COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy-mm-dd"
 REPORTTIME=10
+DISABLE_AUTO_UPDATE="true"
 
 # zsh-syntax-highlighting settings
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
