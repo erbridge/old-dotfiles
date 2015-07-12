@@ -8,6 +8,17 @@ export TERM=linux
 export EDITOR=nano
 
 
+##               ##
+## pre-zsh setup ##
+##               ##
+
+
+if which envoy > /dev/null 2>&1; then
+    envoy -t ssh-agent
+    source <(envoy -p)
+fi
+
+
 ##           ##
 ## zsh setup ##
 ##           ##
@@ -116,11 +127,6 @@ fi
 ## setup ##
 ##       ##
 
-
-if which envoy > /dev/null 2>&1; then
-    envoy -t ssh-agent
-    source <(envoy -p)
-fi
 
 if which pkgfile > /dev/null 2>&1; then
     command_not_found_handler() {
