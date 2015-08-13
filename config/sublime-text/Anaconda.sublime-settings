@@ -145,6 +145,7 @@
     */
     "autoformat_ignore":
     [
+        "E501"
     ],
 
     /*
