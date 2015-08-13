@@ -1,7 +1,4 @@
 [
     // Modific
-    { "keys": ["ctrl+alt+shift+d"], "command": "show_diff" },
-
-    // CodeWrapper
-    { "keys": ["ctrl+shift+l"], "command": "code_wrapper" }
+    { "keys": ["ctrl+alt+shift+d"], "command": "show_diff" }
 ]

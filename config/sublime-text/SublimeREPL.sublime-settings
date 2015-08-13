@@ -1,5 +1,0 @@
-{
-    "python_virtualenv_paths": [
-        "${project_path:${folder}}/venv"
-    ]
-}
