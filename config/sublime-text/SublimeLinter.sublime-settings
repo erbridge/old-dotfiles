@@ -36,6 +36,16 @@
                     "c11"
                 ]
             },
+            "eslint": {
+                "@disable": false,
+                "args": [],
+                "excludes": []
+            },
+            "gometalinter": {
+                "@disable": true,
+                "args": [],
+                "excludes": []
+            },
             "htmltidy": {
                 "@disable": false,
                 "args": [],
@@ -54,6 +64,12 @@
             "json": {
                 "@disable": false,
                 "args": [],
+                "excludes": [],
+                "strict": true
+            },
+            "sass": {
+                "@disable": false,
+                "args": [],
                 "excludes": []
             },
             "shellcheck": {
@@ -65,6 +81,7 @@
         },
         "mark_style": "outline",
         "no_column_highlights_line": false,
+        "passive_warnings": false,
         "paths": {
             "linux": [],
             "osx": [],
