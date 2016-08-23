@@ -144,6 +144,8 @@ if which pkgfile > /dev/null 2>&1; then
     }
 fi
 
+eval "$(rbenv init -)"
+
 
 ##                 ##
 ## welcome message ##
