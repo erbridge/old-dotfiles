@@ -22,7 +22,14 @@
 		"spellcasting",
 		"spellcaster",
 		"cantrip",
-		"vampiric"
+		"vampiric",
+		"backend",
+		"frontend",
+		"app",
+		"filename",
+		"fullscreen",
+		"pangrams",
+		"pangram"
 	],
 	"auto_close_tags": true,
 	"bold_folder_labels": true,
