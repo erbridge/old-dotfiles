@@ -122,6 +122,8 @@ fi
 
 alias bower='noglob bower'
 
+unalias ping
+
 
 ##       ##
 ## setup ##
