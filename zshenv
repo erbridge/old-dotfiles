@@ -12,4 +12,7 @@ fi
 export GOPATH="$HOME/dev/golang"
 export PATH="$GOPATH/bin:$PATH"
 
+export ANDROID_HOME="$HOME/Android/Sdk"
+export PATH="$ANDROID_HOME/tools:$PATH"
+
 export PATH="$HOME/bin:$PATH"
