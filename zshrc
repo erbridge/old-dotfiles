@@ -35,6 +35,9 @@ DISABLE_AUTO_UPDATE="true"
 # zsh-syntax-highlighting settings
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
+# zgen settings
+ZGEN_RESET_ON_CHANGE="$HOME/.zshrc"
+
 # autoupdate-zgen settings
 ZGEN_PLUGIN_UPDATE_DAYS=7
 ZGEN_SYSTEM_UPDATE_DAYS=7
@@ -52,29 +55,22 @@ if ! zgen saved; then
     # oh-my-zsh plugins
     zgen oh-my-zsh
 
+    zgen oh-my-zsh plugins/adb
     zgen oh-my-zsh plugins/autojump
     zgen oh-my-zsh plugins/bower
     zgen oh-my-zsh plugins/bundler
-    zgen oh-my-zsh plugins/colored-man
-    zgen oh-my-zsh plugins/django
+    zgen oh-my-zsh plugins/colored-man-pages
     zgen oh-my-zsh plugins/docker
-    zgen oh-my-zsh plugins/ember-cli
     zgen oh-my-zsh plugins/extract
-    zgen oh-my-zsh plugins/fabric
-    zgen oh-my-zsh plugins/gem
-    zgen oh-my-zsh plugins/git
-    zgen oh-my-zsh plugins/git-extras
     zgen oh-my-zsh plugins/golang
     zgen oh-my-zsh plugins/heroku
     zgen oh-my-zsh plugins/node
     zgen oh-my-zsh plugins/npm
     zgen oh-my-zsh plugins/pip
     zgen oh-my-zsh plugins/python
-    zgen oh-my-zsh plugins/rbenv
     zgen oh-my-zsh plugins/sudo
     zgen oh-my-zsh plugins/systemadmin
     zgen oh-my-zsh plugins/systemd
-    zgen oh-my-zsh plugins/vagrant
     zgen oh-my-zsh plugins/virtualenvwrapper
 
     # zsh-users plugins
@@ -83,9 +79,10 @@ if ! zgen saved; then
     zgen load zsh-users/zsh-syntax-highlighting
 
     # Other plugins
-    zgen load akoenig/gulp-autocompletion-zsh
+    zgen load akoenig/gulp.plugin.zsh
+    zgen load akoenig/npm-run.plugin.zsh
     zgen load djui/alias-tips
-    zgen load horosgrisa/zsh-gvm
+    zgen load RobSis/zsh-completion-generator
     zgen load supercrabtree/k
     zgen load Tarrasch/zsh-bd
     zgen load unixorn/autoupdate-zgen
