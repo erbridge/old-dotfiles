@@ -1,8 +1,11 @@
 {
 	"extensions":
 	[
-		"xcconfig",
+		"bash",
+		"sh",
 		"zsh-theme",
+		"xcconfig",
+		"zsh",
 		".zshrc"
 	]
 }
