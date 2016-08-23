@@ -11,5 +11,7 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[transfer]
+	fsckobjects = true
 [alias]
 	serve = daemon --reuseaddr --base-path=. --export-all --verbose --enable=receive-pack
