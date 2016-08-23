@@ -67,6 +67,7 @@
 		"SyntaxHighlightTools",
 		"Tag",
 		"Theme - Afterglow",
+		"TODO-syntax-highlighter",
 		"TodoReview",
 		"ToggleQuotes",
 		"Unity3D Build System",
@@ -76,5 +77,6 @@
 	],
 	"repositories":
 	[
+		"https://github.com/nothke/TODO-syntax-highlighter.git"
 	]
 }
