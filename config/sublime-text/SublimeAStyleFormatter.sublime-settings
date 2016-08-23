@@ -3,7 +3,7 @@
     "debug": false,
 
     // Auto format on file save
-    "autoformat_on_save": true,
+    "autoformat_on_save": false,
 
     // The mapping key is `syntax name`, and the value is `formatting mode`.
     // Note that the value for each mapping should be "c", "java" or "cs".
@@ -23,7 +23,7 @@
         // "k/r" "stroustrup", "whitesmith", "banner", "gnu", "linux", "horstmann",
         // "1tbs", "otbs ", "google", "pico", "lisp", "python", "vtk", or null
         // for default.
-        "style": "allman",
+        "style": "attach",
 
         // Tab options
         // "indent": Can be one of "spaces", "tab" "force-tab", "force-tab-x", or null
@@ -223,7 +223,7 @@
         // (e.g. 'else', 'catch', ...) from their immediately preceding closing brackets.
         // Closing header brackets are always broken with broken brackets, horstmann
         // rackets, indented blocks, and indented brackets.
-        "break-closing-brackets": true,
+        "break-closing-brackets": false,
 
         // Break "else if" header combinations into separate lines. This option has no effect
         // if keep-one-line-statements is used, the "else if" statements will remain as they are.
@@ -250,7 +250,7 @@
         "remove-brackets": false,
 
         // Don't break one-line blocks.
-        "keep-one-line-blocks": true,
+        "keep-one-line-blocks": false,
 
         // Don't break complex statements and multiple statements residing on a single line.
         "keep-one-line-statements": false,
@@ -284,7 +284,7 @@
         // By default logical conditionals will be placed first on the new line.
         // The option break-after-logical will cause the logical conditionals to be
         // placed last on the previous line. This option has no effect without max-code-length.
-        "max-code-length": null,
+        "max-code-length": 80,
         "break-after-logical": true,
 
         // == Objective-C Options ==
