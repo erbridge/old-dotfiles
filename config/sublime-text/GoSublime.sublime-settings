@@ -6,11 +6,7 @@
 	// e.g "env": { "PATH": "$HOME/go/bin:$PATH" }
 	// in values, $PATH and ${PATH} are replaced with
 	// the corresponding environment(PATH) variable, if it exists.
-	"env":
-	{
-		"GOROOT": "$HOME/.gvm/gos/go1.4",
-		"GOPATH": "$HOME/.gvm/pkgsets/go1.4/global"
-	},
+	"env": {},
 
 	// if set, whenever possible `GOPATH` will be set to `GS_GOPATH`.
 	// please see `Usage & Tips` `ctrl+dot,ctrl+2`
@@ -155,7 +151,7 @@
 	"autocomplete_tests": false,
 
 	// whether or not builtin types and functions should be shown in the auto-completion list
-	"autocomplete_builtins": false,
+	"autocomplete_builtins": true,
 
 	// whether or not to show an expanded(closure) version of func types in the auto-completion list
 	// e.g. `type Fun func(i int)`
@@ -171,7 +167,7 @@
 	// whether or not autocomplete should suggest possible imports when autocomplete fails to
 	// find a match.
 	// note: this feature only comes into effect when autocomplete was triggered after a dot, e.g. `fmt.|`
-	"autocomplete_suggest_imports": false,
+	"autocomplete_suggest_imports": true,
 
 	// whether or not to show function call tip in the status bar
 	// the same can be achieved ctrl+dot,ctrl+space using an output panel
