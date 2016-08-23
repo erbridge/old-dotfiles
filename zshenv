@@ -9,4 +9,7 @@ if [[ -d "$npm_path" && -d "$npm_bin_path" ]]; then
     export PATH="$npm_bin_path:$PATH"
 fi
 
+export GOPATH="$HOME/dev/golang"
+export PATH="$GOPATH/bin:$PATH"
+
 export PATH="$HOME/bin:$PATH"
