@@ -120,6 +120,8 @@ if which /usr/bin/aura > /dev/null 2>&1; then
     }
 fi
 
+alias bower='noglob bower'
+
 
 ##       ##
 ## setup ##
