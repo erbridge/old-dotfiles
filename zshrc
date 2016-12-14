@@ -72,6 +72,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/systemadmin
     zgen oh-my-zsh plugins/systemd
     zgen oh-my-zsh plugins/virtualenvwrapper
+    zgen oh-my-zsh plugins/yarn
 
     # zsh-users plugins
     zgen load zsh-users/zsh-completions src
