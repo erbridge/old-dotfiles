@@ -2,10 +2,10 @@
 	"extensions":
 	[
 		"bash",
+		"zsh",
+		"xcconfig",
 		"sh",
 		"zsh-theme",
-		"xcconfig",
-		"zsh",
 		".zshrc"
 	]
 }

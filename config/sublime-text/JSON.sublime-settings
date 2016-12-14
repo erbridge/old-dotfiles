@@ -2,12 +2,12 @@
 	"extensions":
 	[
 		".sublimelinterrc",
-		".csslintrc",
-		".jshintrc",
-		".jscsrc",
 		".bowerrc",
 		".eslintrc",
+		".jshintrc",
+		"projmod",
 		"geojson",
-		"projmod"
+		".jscsrc",
+		".csslintrc"
 	]
 }

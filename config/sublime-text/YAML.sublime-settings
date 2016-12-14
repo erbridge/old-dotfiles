@@ -2,8 +2,8 @@
 	"extensions":
 	[
 		"YAML-tmLanguage",
+		"yml.dist",
 		".gemrc",
-		"yml",
-		"yml.dist"
+		"yml"
 	]
 }
