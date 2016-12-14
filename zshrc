@@ -112,7 +112,8 @@ if which /usr/bin/aura > /dev/null 2>&1; then
     function aura() {
         AURA="$(/usr/bin/aura "$@" 2>&1)"
 
-        if echo "$AURA" | grep -q '^aura >>= .*Please check your input.*$\|^aura >>= .*You have to use `.*sudo.*` for that.*$'; then
+        if echo "$AURA" | grep -q '^.*[Yy]ou cannot perform this operation
+unless you are root.*$'; then
             sudo /usr/bin/aura "$@"
         else
             echo "$AURA"
