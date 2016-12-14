@@ -29,7 +29,10 @@
 		"filename",
 		"fullscreen",
 		"pangrams",
-		"pangram"
+		"pangram",
+		"handaxe",
+		"auth",
+		"unfollow"
 	],
 	"auto_close_tags": true,
 	"bold_folder_labels": true,
