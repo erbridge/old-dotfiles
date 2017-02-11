@@ -1,1 +1,6 @@
+/atom/git-time-machine/
+/atom/packages/
+/atom/split-diff/
+/atom/projects.cson
+
 /config/sublime-text/GitSavvy/GitSavvy.active-diff-view.*.*tmTheme

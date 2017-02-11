@@ -1,0 +1,131 @@
+"*":
+  "advanced-open-file":
+    defaultInputValue: "Project root"
+    fuzzyMatch: true
+    helmDirSwitch: true
+  "atom-beautify":
+    clj:
+      beautify_on_save: true
+    cs:
+      beautify_on_save: true
+      configPath: "~/.uncrustify/custom.cfg"
+    general:
+      _analyticsUserId: "614ef750-f0d2-4274-bc56-a843a3a4bfd5"
+    go:
+      beautify_on_save: true
+    js:
+      break_chained_methods: true
+      end_with_comma: true
+      end_with_newline: true
+      indent_size: 2
+    python:
+      default_beautifier: "yapf"
+      sort_imports: true
+  "atom-ternjs":
+    inlineFnCompletion: false
+  "autocomplete-python":
+    useKite: false
+    useSnippets: "required"
+  "base16-syntax":
+    scheme: "Ocean"
+  build:
+    overrideThemeColors: false
+  "command-palette":
+    preserveLastSearch: true
+  core:
+    automaticallyUpdate: false
+    customFileTypes:
+      "source.yaml": [
+        "config"
+      ]
+    disabledPackages: [
+      "welcome"
+      "autosave"
+      "about"
+      "split-diff"
+      "git-panel"
+      "linter-clojure"
+      "linter-lein"
+      "linter-alex"
+    ]
+    openEmptyEditorOnStart: false
+    packagesWithKeymapsDisabled: [
+      "pinned-tabs"
+      "omnisharp-atom"
+    ]
+    telemetryConsent: "limited"
+    themes: [
+      "nucleus-dark-ui"
+      "base16-syntax"
+    ]
+  editor:
+    autoIndentOnPaste: false
+    fontFamily: "Input Mono Condensed"
+    fontSize: 16
+    scrollPastEnd: true
+    showIndentGuide: true
+    zoomFontWhenCtrlScrolling: false
+  "exception-reporting":
+    userId: "e332d6da-be0d-5b50-63b6-a58eecdc36cb"
+  figlet:
+    defaultFont: "ANSI Shadow"
+  "find-and-replace":
+    projectSearchResultsPaneSplitDirection: "right"
+    scrollToResultOnLiveSearch: true
+  "git-plus":
+  hyperclick:
+    linuxTriggerKeys: "altKey"
+  "js-hyperclick":
+    extensions: [
+      ".js"
+      ".json"
+      ".node"
+      ".jsx"
+    ]
+  linter:
+    showErrorInline: false
+  "linter-pylama":
+    useIsort: true
+    usePep257: false
+    usePyflakes: false
+  "markdown-writer":
+    fileExtension: ".md"
+  "omnisharp-atom":
+    enhancedHighlighting19: true
+    featureButtons: false
+    featureEditorButtons: false
+    signatureHelp: true
+    useIcons: false
+    useLeftLabelColumnForSuggestions: true
+  pigments:
+    markerType: "square-dot"
+    traverseIntoSymlinkDirectories: true
+  "prettier-atom":
+    singleQuote: true
+    trailingComma: true
+  "project-plus":
+    autoDiscover: false
+    newWindow: true
+    showPath: true
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
+  tabs:
+    addNewTabsAtEnd: true
+    enableVcsColoring: true
+  "todo-show":
+    sortBy: "Type"
+    statusBarIndicator: true
+  "toggle-quotes":
+    quoteCharacters: "\"'`"
+  "tree-view":
+    hideIgnoredNames: true
+    squashDirectoryNames: true
+  welcome:
+    showOnStartup: false
+".plain.text":
+  editor:
+    softWrap: true
