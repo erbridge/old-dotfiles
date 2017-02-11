@@ -89,7 +89,7 @@ if ! zgen saved; then
     zgen load unixorn/autoupdate-zgen
 
     # Theme
-    zgen load erbridge/triangle-zsh-theme triangle
+    # zgen load erbridge/triangle-zsh-theme triangle
 
     zgen save
 fi
@@ -101,6 +101,17 @@ if [[ -n $terminfo[kcuu1] ]]; then
 fi
 if [[ -n $terminfo[kcud1] ]]; then
     bindkey "$terminfo[kcud1]" history-substring-search-down
+fi
+
+if pip show powerline-status > /dev/null 2>&1; then
+  powerline-daemon -q
+
+  POWERLINE_ROOT="$(pip show powerline-status | grep Location | sed 's/Location: //')/powerline"
+  POWERLINE_PATH="$POWERLINE_ROOT/bindings/zsh/powerline.zsh"
+
+  if [[ -f $POWERLINE_PATH ]]; then
+    source "$POWERLINE_PATH"
+  fi
 fi
 
 
