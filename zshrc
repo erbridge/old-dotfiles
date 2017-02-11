@@ -75,6 +75,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/yarn
 
     # zsh-users plugins
+    zgen load zsh-users/zsh-autosuggestions
     zgen load zsh-users/zsh-completions
     zgen load zsh-users/zsh-history-substring-search
     zgen load zsh-users/zsh-syntax-highlighting
@@ -83,6 +84,7 @@ if ! zgen saved; then
     zgen load akoenig/gulp.plugin.zsh
     zgen load akoenig/npm-run.plugin.zsh
     zgen load djui/alias-tips
+    zgen load denysdovhan/gitio-zsh
     zgen load RobSis/zsh-completion-generator
     zgen load supercrabtree/k
     zgen load Tarrasch/zsh-bd
@@ -114,6 +116,8 @@ if pip show powerline-status > /dev/null 2>&1; then
   fi
 fi
 
+autoload -U zmv
+
 
 ##         ##
 ## aliases ##
@@ -134,6 +138,7 @@ unless you are root.*$'; then
 fi
 
 alias bower='noglob bower'
+alias mmv='noglob zmv -W'
 
 unalias ping
 
