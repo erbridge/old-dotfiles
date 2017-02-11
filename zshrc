@@ -45,7 +45,7 @@ ZGEN_SYSTEM_UPDATE_DAYS=7
 # Setup zgen
 ZGEN_CLONE_DIR="$HOME/zgen"
 
-if [ ! -f "$ZGEN_CLONE_DIR/zgen.zsh" ]; then
+if [[ ! -f $ZGEN_CLONE_DIR/zgen.zsh ]]; then
     git clone git@github.com:tarjoilija/zgen.git "$ZGEN_CLONE_DIR"
 fi
 
@@ -96,10 +96,10 @@ fi
 
 # zsh-history-substring-search key bindings
 zmodload zsh/terminfo
-if [[ -n "$terminfo[kcuu1]" ]]; then
+if [[ -n $terminfo[kcuu1] ]]; then
     bindkey "$terminfo[kcuu1]" history-substring-search-up
 fi
-if [[ -n "$terminfo[kcud1]" ]]; then
+if [[ -n $terminfo[kcud1] ]]; then
     bindkey "$terminfo[kcud1]" history-substring-search-down
 fi
 
