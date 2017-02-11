@@ -14,6 +14,11 @@ if [[ -d "$npm_path" && -d "$npm_bin_path" ]]; then
     export PATH="$npm_bin_path:$PATH"
 fi
 
+pip_user_path="$HOME/.local/bin"
+if [[ -d "$pip_user_path" ]]; then
+    export PATH="$pip_user_path:$PATH"
+fi
+
 export GOPATH="$HOME/dev/golang"
 export PATH="$GOPATH/bin:$PATH"
 
